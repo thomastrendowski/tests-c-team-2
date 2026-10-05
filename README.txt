@@ -1,7 +1,7 @@
-THE C-TEAM v554 — GAMEPLAY AND PROGRESSION
+THE C-TEAM v557 — GAMEPLAY AND PROGRESSION
 
 1. Extract the ENTIRE ZIP before playing.
-2. Open Start_Game.html. Keep Game/ and Media/ together in this folder.
+2. On Windows, double-click Start_Local_Game.bat. Keep its window open while playing. Keep Game/ and Media/ together in this folder.
 3. Existing v553 production saves are retained. Without a production save,
    this version starts fresh. It resets only
    The C-Team's prior completion, unlock, reward, and score records in that
@@ -22,7 +22,7 @@ bosses, in either Content Review or Play Without Questions.
 PROGRESSION
 Start with level 1. Beat each level to unlock the next. Boss characters and
 that board's Morph-Up become permanently available after the win.
-The six starting Morph-Ups are Duffman, Green Goblin, Grinch + Max,
+The six starting Morph-Ups are Duffman, John Wick, Grinch + Max,
 Leeroy Jenkins, Snoopy + Woodstock, and T-101.
 All 16 question sets are retained. Each question-mode level uses the full
 selected question set: one flamingo per question, with the matching HUD and

@@ -1,0 +1,17 @@
+v559 — John Wick, T-101, switching and split JavaScript
+
+SOURCE
+The uploaded v557 only. No v558_HTML_TEST code or assets.
+
+DIAGNOSIS AND CHANGES
+- John Wick previously had no upward velocity on F and used explicit 52/76/96-pixel shooting heights. F now applies upward velocity, shows the jump frame, kicks forward, waits for an actual grounded landing, then stands and fires exactly four shots at a consistent gun height.
+- All 19 John Wick action frames now share a transparent 512x192 canvas with pose-sensitive scaling and a common foot anchor. Shooting uses standing shooting frames; pencil double jump remains.
+- Stale attack state could survive delayed Morph-Up equips or ordinary team switching. Accepted equips cancel previous custom attacks; actual team-row changes revert the Morph Up and cancel pending transforms. Pair-specific swapping keeps its prior behavior.
+- T-101 keeps his supplied shooting frames, laser clip and laser that branches into three directions. Five-star cooldown remains 2.5 seconds. Old lasers are discarded after switching away.
+- Shared safe audio calls now keep independent playback instances, avoiding rapid-call resets. John Wick's four shot cues use this path instead of Lara's single-instance cancellation path.
+- Fixed one missing Uncle Eddie boss-sound alias to the existing actual Eddie sound file.
+- Browser autoplay can be denied before user interaction; the existing Start video button is retained.
+- HTML, asset manifest and game logic are now separate files. All asset paths remain relative for repository-subdirectory GitHub Pages hosting.
+
+PRESERVED
+Same progression and browser-save keys, Pick 6, starter roster and Morph Ups, intro, all storyboard files, question sets and question-based flamingo counts, moving-platform code and Morph-Up portraits.

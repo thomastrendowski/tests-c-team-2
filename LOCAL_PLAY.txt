@@ -1,0 +1,8 @@
+WINDOWS LOCAL PLAY
+Extract the whole ZIP. Double-click Start_Local_Game.bat. Keep the launcher window open. No Python or Node installation is required.
+Use the same launcher/address on later visits to retain progress. Direct file:// HTML opening is unsupported because Edge/Chrome block asset processing.
+GITHUB PAGES
+Upload the extracted contents. index.html opens the game normally over HTTPS.
+
+Local launcher saves use http://127.0.0.1:8765. Saves from a direct file or GitHub Pages live separately because browsers separate those addresses.
+The Windows PowerShell launcher cannot be executed in this Linux test environment. Browser portrait/game checks used HTTP.
