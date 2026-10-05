@@ -1,0 +1,92 @@
+{
+  "waterfallRuntimeChecks": [
+    {
+      "name": "standard horizontal world",
+      "pass": true
+    },
+    {
+      "name": "standard log route",
+      "pass": true
+    },
+    {
+      "name": "standard final arena",
+      "pass": true
+    },
+    {
+      "name": "standard distant exit",
+      "pass": true
+    },
+    {
+      "name": "standard no early bosses",
+      "pass": true
+    },
+    {
+      "name": "standard horizontal scroll",
+      "pass": true
+    },
+    {
+      "name": "standard logs stay in place",
+      "pass": true
+    },
+    {
+      "name": "standard fall respawn",
+      "pass": true
+    },
+    {
+      "name": "standard boss activation",
+      "pass": true
+    },
+    {
+      "name": "standard boss camera stays horizontal",
+      "pass": true
+    },
+    {
+      "name": "noq horizontal world",
+      "pass": true
+    },
+    {
+      "name": "noq log route",
+      "pass": true
+    },
+    {
+      "name": "noq final arena",
+      "pass": true
+    },
+    {
+      "name": "noq distant exit",
+      "pass": true
+    },
+    {
+      "name": "noq no early bosses",
+      "pass": true
+    },
+    {
+      "name": "noq horizontal scroll",
+      "pass": true
+    },
+    {
+      "name": "noq logs stay in place",
+      "pass": true
+    },
+    {
+      "name": "noq fall respawn",
+      "pass": true
+    },
+    {
+      "name": "noq boss activation",
+      "pass": true
+    },
+    {
+      "name": "noq boss camera stays horizontal",
+      "pass": true
+    }
+  ],
+  "newImageDimensions": [
+    1672,
+    941
+  ],
+  "bootPosterMatches": true,
+  "homeAndSelectionPosterMatches": true,
+  "laterPosterOverridesMatch": true,
+  "javascriptSyntax": "passed"
+}

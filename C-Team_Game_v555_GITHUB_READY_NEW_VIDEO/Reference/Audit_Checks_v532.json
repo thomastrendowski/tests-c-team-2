@@ -1,0 +1,410 @@
+[
+  {
+    "name": "standard Sentinel contains no Goombas",
+    "pass": true
+  },
+  {
+    "name": "standard Morph reward comes from reachable question box",
+    "pass": true
+  },
+  {
+    "name": "noq Sentinel contains no Goombas",
+    "pass": true
+  },
+  {
+    "name": "noq Morph reward comes from reachable question box",
+    "pass": true
+  },
+  {
+    "name": "allunlocked Sentinel contains no Goombas",
+    "pass": true
+  },
+  {
+    "name": "allunlocked Morph reward comes from reachable question box",
+    "pass": true
+  },
+  {
+    "name": "mountain walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "waterfall walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "sentinel walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "gotham walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "office walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "snow walking Penguin restriction",
+    "pass": true
+  },
+  {
+    "name": "Machine crop removes source padding",
+    "pass": true
+  },
+  {
+    "name": "Machine orange frame is removed",
+    "pass": true
+  },
+  {
+    "name": "Offscreen enemy sound is muted",
+    "pass": true
+  },
+  {
+    "name": "Visible enemy sound plays",
+    "pass": true
+  },
+  {
+    "name": "standard Amy Rose two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Charizard two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Clayface two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Count Chocula two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Death Star two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard McFly + DeLorean two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Duffman two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Frodo + Gimli two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Goku two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Green Goblin two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Grinch + Max two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Iron Man two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Joker + Batmobile two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard King Kong two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Leeroy Jenkins two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Michelangelo two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Mint-Berry Crunch two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Ms. Pac-Man two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Shaggy + Mystery Machine two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Night King two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Olaf two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Princess Peach two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Snoopy + Woodstock two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Storm two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard T-101 two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Tommy + Reptar two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Uncle Eddie + RV two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Wonder Woman two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "standard Woody two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Amy Rose two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Charizard two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Clayface two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Count Chocula two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Death Star two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq McFly + DeLorean two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Duffman two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Frodo + Gimli two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Goku two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Green Goblin two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Grinch + Max two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Iron Man two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Joker + Batmobile two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq King Kong two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Leeroy Jenkins two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Michelangelo two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Mint-Berry Crunch two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Ms. Pac-Man two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Shaggy + Mystery Machine two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Night King two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Olaf two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Princess Peach two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Snoopy + Woodstock two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Storm two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq T-101 two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Tommy + Reptar two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Uncle Eddie + RV two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Wonder Woman two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Woody two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "Penguin receives freeze without being defeated",
+    "pass": true
+  },
+  {
+    "name": "Yeti receives freeze without immediate defeat",
+    "pass": true
+  },
+  {
+    "name": "Regular status pass excludes bosses",
+    "pass": true
+  },
+  {
+    "name": "Mr Freeze Yeti expires with intended defeat",
+    "pass": true
+  },
+  {
+    "name": "Damaging F projectiles defeat Penguin and Yeti",
+    "pass": true
+  },
+  {
+    "name": "TNT boxes sit in middle of visible screen",
+    "pass": true
+  },
+  {
+    "name": "Armed TNT stays put during fuse",
+    "pass": true
+  },
+  {
+    "name": "standard Barbarian Homer + Mage Marge two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "noq Barbarian Homer + Mage Marge two protected hits then revert",
+    "pass": true
+  },
+  {
+    "name": "P1 head bump releases emoji reward",
+    "pass": true
+  },
+  {
+    "name": "P1 emoji reward starts chosen transformation",
+    "pass": true
+  },
+  {
+    "name": "P2 head bump releases emoji reward",
+    "pass": true
+  },
+  {
+    "name": "P2 emoji reward starts chosen transformation",
+    "pass": true
+  },
+  {
+    "name": "Robot crop removes neighboring sprite fragment",
+    "pass": true
+  },
+  {
+    "name": "Robot frame 0 cleaned",
+    "pass": true
+  },
+  {
+    "name": "Robot frame 1 cleaned",
+    "pass": true
+  },
+  {
+    "name": "Robot frame 2 cleaned",
+    "pass": true
+  },
+  {
+    "name": "Robot frame 3 cleaned",
+    "pass": true
+  },
+  {
+    "name": "Technodrome impact plays laser and thud",
+    "pass": true
+  },
+  {
+    "name": "Wide descending laser code retained",
+    "pass": true
+  },
+  {
+    "name": "All 96 bosses retain their rules",
+    "pass": true
+  },
+  {
+    "name": "Final offscreen audio scope mutes enemy",
+    "pass": true
+  },
+  {
+    "name": "Final visible audio scope plays enemy",
+    "pass": true
+  },
+  {
+    "name": "Minion clip matches supplied banana scream",
+    "pass": true
+  },
+  {
+    "name": "Minion F army plays banana scream once",
+    "pass": true
+  },
+  {
+    "name": "Minion F still creates army projectiles",
+    "pass": true
+  },
+  {
+    "name": "Minion F profile preview plays supplied clip",
+    "pass": true
+  },
+  {
+    "name": "Minion NPC sound is silent offscreen",
+    "pass": true
+  }
+]

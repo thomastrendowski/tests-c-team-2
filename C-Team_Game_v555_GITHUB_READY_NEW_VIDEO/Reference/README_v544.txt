@@ -1,0 +1,1 @@
+Waterfall fixes: falling rocks render relative to the horizontal camera. Question boxes attach to the nearest log and keep their underside 128 pixels above its surface, tracking platform movement. Based on v542. Syntax and focused rock/box checks passed. Open C-Team_Game_v544_WATERFALL_ROCKS_BOXES.html.
