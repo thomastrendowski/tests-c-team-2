@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Attack starts",
+    "pass": true
+  },
+  {
+    "name": "Recharge is eleven seconds",
+    "pass": true
+  },
+  {
+    "name": "No damage before laser reaches ground",
+    "pass": true
+  },
+  {
+    "name": "Impact defeats both left and right visible enemies",
+    "pass": true
+  },
+  {
+    "name": "Offscreen enemy survives",
+    "pass": true
+  },
+  {
+    "name": "Vulnerable boss takes exactly one hit",
+    "pass": true
+  },
+  {
+    "name": "Shielded boss remains protected",
+    "pass": true
+  },
+  {
+    "name": "Impact does not repeatedly damage boss",
+    "pass": true
+  },
+  {
+    "name": "Range/recharge stats updated",
+    "pass": true
+  }
+]

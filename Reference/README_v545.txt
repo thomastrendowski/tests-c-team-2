@@ -1,0 +1,1 @@
+Fixes the v544 syncWaterfallBoxes ReferenceError by exposing the callback from its owning closure. Retains waterfall rock camera correction and platform-relative question-box clearance. JavaScript syntax and closure/game-loop regression checks passed. Open C-Team_Game_v545_WATERFALL_SCOPE_FIX.html.

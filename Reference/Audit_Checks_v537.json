@@ -1,0 +1,614 @@
+[
+  {
+    "name": "standard P1 summon starts with generic F disabled",
+    "pass": true
+  },
+  {
+    "name": "standard P1 no early F/body/projectile kill",
+    "pass": true
+  },
+  {
+    "name": "standard P1 impact and thud defeat every visible target",
+    "pass": true
+  },
+  {
+    "name": "standard P1 offscreen target survives",
+    "pass": true
+  },
+  {
+    "name": "standard P2 summon starts with generic F disabled",
+    "pass": true
+  },
+  {
+    "name": "standard P2 no early F/body/projectile kill",
+    "pass": true
+  },
+  {
+    "name": "standard P2 impact and thud defeat every visible target",
+    "pass": true
+  },
+  {
+    "name": "standard P2 offscreen target survives",
+    "pass": true
+  },
+  {
+    "name": "noq P1 summon starts with generic F disabled",
+    "pass": true
+  },
+  {
+    "name": "noq P1 no early F/body/projectile kill",
+    "pass": true
+  },
+  {
+    "name": "noq P1 impact and thud defeat every visible target",
+    "pass": true
+  },
+  {
+    "name": "noq P1 offscreen target survives",
+    "pass": true
+  },
+  {
+    "name": "noq P2 summon starts with generic F disabled",
+    "pass": true
+  },
+  {
+    "name": "noq P2 no early F/body/projectile kill",
+    "pass": true
+  },
+  {
+    "name": "noq P2 impact and thud defeat every visible target",
+    "pass": true
+  },
+  {
+    "name": "noq P2 offscreen target survives",
+    "pass": true
+  },
+  {
+    "name": "standard P1 actual launch uses 5-star mech jump",
+    "pass": true
+  },
+  {
+    "name": "standard P1 range is 3 stars",
+    "pass": true
+  },
+  {
+    "name": "standard P1 five-star jump is per-player",
+    "pass": true
+  },
+  {
+    "name": "standard P1 normal jump restored on expiry",
+    "pass": true
+  },
+  {
+    "name": "standard P2 actual launch uses 5-star mech jump",
+    "pass": true
+  },
+  {
+    "name": "standard P2 range is 3 stars",
+    "pass": true
+  },
+  {
+    "name": "standard P2 five-star jump is per-player",
+    "pass": true
+  },
+  {
+    "name": "standard P2 normal jump restored on expiry",
+    "pass": true
+  },
+  {
+    "name": "noq P1 actual launch uses 5-star mech jump",
+    "pass": true
+  },
+  {
+    "name": "noq P1 range is 3 stars",
+    "pass": true
+  },
+  {
+    "name": "noq P1 five-star jump is per-player",
+    "pass": true
+  },
+  {
+    "name": "noq P1 normal jump restored on expiry",
+    "pass": true
+  },
+  {
+    "name": "noq P2 actual launch uses 5-star mech jump",
+    "pass": true
+  },
+  {
+    "name": "noq P2 range is 3 stars",
+    "pass": true
+  },
+  {
+    "name": "noq P2 five-star jump is per-player",
+    "pass": true
+  },
+  {
+    "name": "noq P2 normal jump restored on expiry",
+    "pass": true
+  },
+  {
+    "name": "Dash travels the configured three-star range",
+    "pass": true
+  },
+  {
+    "name": "Swept dash contact hits small enemies between frames",
+    "pass": true
+  },
+  {
+    "name": "Dash returns to origin",
+    "pass": true
+  },
+  {
+    "name": "Mech remains 10 seconds and 1-star recharge",
+    "pass": true
+  },
+  {
+    "name": "Mech expires without retaining jump boost",
+    "pass": true
+  },
+  {
+    "name": "Profiles: target survives laser descent",
+    "pass": true
+  },
+  {
+    "name": "Profiles: target dies only at impact",
+    "pass": true
+  },
+  {
+    "name": "Profiles: reset restores target",
+    "pass": true
+  },
+  {
+    "name": "All 96 boss configurations retained",
+    "pass": true
+  },
+  {
+    "name": "standard P1 Waterfall floor remains fixed and screen wide",
+    "pass": true
+  },
+  {
+    "name": "standard P1 lands on bottom solid floor",
+    "pass": true
+  },
+  {
+    "name": "standard P1 Tokyo lift moves and stays unique",
+    "pass": true
+  },
+  {
+    "name": "standard P1 lift is inside boss arena",
+    "pass": true
+  },
+  {
+    "name": "standard P1 second wave includes Randall",
+    "pass": true
+  },
+  {
+    "name": "standard P1 Randall finishes drop on floor",
+    "pass": true
+  },
+  {
+    "name": "standard P2 Waterfall floor remains fixed and screen wide",
+    "pass": true
+  },
+  {
+    "name": "standard P2 lands on bottom solid floor",
+    "pass": true
+  },
+  {
+    "name": "standard P2 Tokyo lift moves and stays unique",
+    "pass": true
+  },
+  {
+    "name": "standard P2 lift is inside boss arena",
+    "pass": true
+  },
+  {
+    "name": "standard P2 second wave includes Randall",
+    "pass": true
+  },
+  {
+    "name": "standard P2 Randall finishes drop on floor",
+    "pass": true
+  },
+  {
+    "name": "noq P1 Waterfall floor remains fixed and screen wide",
+    "pass": true
+  },
+  {
+    "name": "noq P1 lands on bottom solid floor",
+    "pass": true
+  },
+  {
+    "name": "noq P1 Tokyo lift moves and stays unique",
+    "pass": true
+  },
+  {
+    "name": "noq P1 lift is inside boss arena",
+    "pass": true
+  },
+  {
+    "name": "noq P1 second wave includes Randall",
+    "pass": true
+  },
+  {
+    "name": "noq P1 Randall finishes drop on floor",
+    "pass": true
+  },
+  {
+    "name": "noq P2 Waterfall floor remains fixed and screen wide",
+    "pass": true
+  },
+  {
+    "name": "noq P2 lands on bottom solid floor",
+    "pass": true
+  },
+  {
+    "name": "noq P2 Tokyo lift moves and stays unique",
+    "pass": true
+  },
+  {
+    "name": "noq P2 lift is inside boss arena",
+    "pass": true
+  },
+  {
+    "name": "noq P2 second wave includes Randall",
+    "pass": true
+  },
+  {
+    "name": "noq P2 Randall finishes drop on floor",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude97 painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude95 painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude99 painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude93 painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude9a painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\udefb painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "\ud83d\ude9b painted bottom matches road",
+    "pass": true
+  },
+  {
+    "name": "Willie captures original elephant",
+    "pass": true
+  },
+  {
+    "name": "Captured elephant renders as elephant",
+    "pass": true
+  },
+  {
+    "name": "Capture preserves emoji and entity identity",
+    "pass": true
+  },
+  {
+    "name": "Captured elephant falls and clears at ground",
+    "pass": true
+  },
+  {
+    "name": "Randall artwork feet anchor to boss ground",
+    "pass": true
+  },
+  {
+    "name": "All boss assignments preserved",
+    "pass": true
+  },
+  {
+    "name": "standard Wonka has four Oompa Loompas",
+    "pass": true
+  },
+  {
+    "name": "standard Wonka has no Frosty snowmen",
+    "pass": true
+  },
+  {
+    "name": "standard Oompa walks",
+    "pass": true
+  },
+  {
+    "name": "standard Oompa is regular F target",
+    "pass": true
+  },
+  {
+    "name": "noq Wonka has four Oompa Loompas",
+    "pass": true
+  },
+  {
+    "name": "noq Wonka has no Frosty snowmen",
+    "pass": true
+  },
+  {
+    "name": "noq Oompa walks",
+    "pass": true
+  },
+  {
+    "name": "noq Oompa is regular F target",
+    "pass": true
+  },
+  {
+    "name": "snowman 0 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 0 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 1 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 1 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 2 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 2 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 3 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 3 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 4 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 4 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 5 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 5 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 6 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 6 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 7 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 7 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 8 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 8 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 9 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 9 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snowman 10 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snowman 10 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snake 0 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snake 0 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snake 1 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snake 1 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snake 2 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snake 2 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "snake 3 crop exists and strips sheet edges",
+    "pass": true
+  },
+  {
+    "name": "snake 3 has no orange border",
+    "pass": true
+  },
+  {
+    "name": "Snake faces -1",
+    "pass": true
+  },
+  {
+    "name": "Snake faces 1",
+    "pass": true
+  },
+  {
+    "name": "Patrick cleaned for playable and boss renderer",
+    "pass": true
+  },
+  {
+    "name": "Iron Man profile has existing artwork",
+    "pass": true
+  },
+  {
+    "name": "Portrait setter available",
+    "pass": true
+  },
+  {
+    "name": "Tutorial explains I for P1",
+    "pass": true
+  },
+  {
+    "name": "No emoji snakes or toucans in Jungle",
+    "pass": true
+  },
+  {
+    "name": "Converted sprite snake moves without NaN",
+    "pass": true
+  },
+  {
+    "name": "Jungle wide lift keeps full climb above boss",
+    "pass": true
+  },
+  {
+    "name": "Tommy sound emitter available",
+    "pass": true
+  },
+  {
+    "name": "Offscreen Tommy/Reptar roar suppressed",
+    "pass": true
+  },
+  {
+    "name": "Visible Tommy/Reptar roar plays",
+    "pass": true
+  },
+  {
+    "name": "Actual elephant found",
+    "pass": true
+  },
+  {
+    "name": "Captured elephant uses original NPC frames",
+    "pass": true
+  },
+  {
+    "name": "Mummy source mirrored for direction -1",
+    "pass": true
+  },
+  {
+    "name": "Mummy source mirrored for direction 1",
+    "pass": true
+  },
+  {
+    "name": "Sandtrap has wide moving boss lift",
+    "pass": true
+  },
+  {
+    "name": "Older desert background used",
+    "pass": true
+  },
+  {
+    "name": "Sand trap covers bottom of screen opaquely",
+    "pass": true
+  },
+  {
+    "name": "Sand trap has dark visible edge",
+    "pass": true
+  },
+  {
+    "name": "standard continuous ending floor",
+    "pass": true
+  },
+  {
+    "name": "standard walkers stand on logs",
+    "pass": true
+  },
+  {
+    "name": "standard four spaced regular Woody enemies",
+    "pass": true
+  },
+  {
+    "name": "standard Mint casters use preserved art",
+    "pass": true
+  },
+  {
+    "name": "noq continuous ending floor",
+    "pass": true
+  },
+  {
+    "name": "noq walkers stand on logs",
+    "pass": true
+  },
+  {
+    "name": "noq four spaced regular Woody enemies",
+    "pass": true
+  },
+  {
+    "name": "noq Mint casters use preserved art",
+    "pass": true
+  },
+  {
+    "name": "standard Michelangelo replaces Pizza Goombas",
+    "pass": true
+  },
+  {
+    "name": "standard Michelangelo artwork row valid",
+    "pass": true
+  },
+  {
+    "name": "standard regular turtles move",
+    "pass": true
+  },
+  {
+    "name": "standard Kang visible feet flush with ground",
+    "pass": true
+  },
+  {
+    "name": "noq Michelangelo replaces Pizza Goombas",
+    "pass": true
+  },
+  {
+    "name": "noq Michelangelo artwork row valid",
+    "pass": true
+  },
+  {
+    "name": "noq regular turtles move",
+    "pass": true
+  },
+  {
+    "name": "noq Kang visible feet flush with ground",
+    "pass": true
+  },
+  {
+    "name": "Walking monster cropped to connected body",
+    "pass": true
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "javascriptSyntax": "passed",
+  "randallStarter": true,
+  "tysonLockedUntilPrideLandsClear": true,
+  "tysonBossSlot": {
+    "board": "pridelands",
+    "wave": 2,
+    "slot": 2
+  },
+  "unlockAwardOnce": "passed",
+  "atlasFrameCount": 24,
+  "egyptianDesertExit": true,
+  "atlasGroundingAndBounds": "passed",
+  "fullBrowserPlaytest": "not run"
+}
