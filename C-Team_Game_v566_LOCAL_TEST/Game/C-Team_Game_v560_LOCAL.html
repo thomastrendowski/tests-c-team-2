@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The C-Team — v566</title>
+<!-- build v428 DEV / separated assets -->
+<style>
+
+
+  html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#0b1020;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background-image:linear-gradient(rgba(2,5,12,.34),rgba(2,5,12,.48)),var(--v169-c-team-bg);background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+  #wrap{position:relative;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh;padding:0;overflow:hidden;background:#0b1020;background-image:linear-gradient(rgba(2,5,12,.34),rgba(2,5,12,.48)),var(--v169-c-team-bg);background-size:cover;background-position:center;background-repeat:no-repeat;}
+  canvas{display:block;background:#000;border-radius:0;box-shadow:none;width:min(100vw,calc(100vh * 16 / 9));height:min(100vh,calc(100vw * 9 / 16));max-width:none;max-height:none;}
+  .hud{position:absolute;z-index:25;top:8px;left:50%;transform:translateX(-50%);width:min(calc(100vw - 28px),calc(100vh * 16 / 9 - 28px));box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 11px;border-radius:12px;background:rgba(7,11,24,.58);backdrop-filter:blur(5px);opacity:.96;pointer-events:auto;}
+  .hint{position:absolute;z-index:25;bottom:8px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 28px);box-sizing:border-box;padding:6px 10px;border-radius:10px;background:rgba(7,11,24,.60);backdrop-filter:blur(5px);opacity:.9;font-size:13px;line-height:1.3;text-align:center;}
+  #fullscreenBtn{appearance:none;border:1px solid rgba(255,255,255,.22);border-radius:9px;padding:5px 9px;background:rgba(255,255,255,.12);color:#fff;font:700 12px system-ui;cursor:pointer;white-space:nowrap;}
+  #fullscreenBtn:hover{background:rgba(255,255,255,.2);}
+  @media (max-width:760px){.hud{font-size:12px;top:4px;padding:5px 7px}.hint{font-size:11px;bottom:4px;padding:4px 7px}#fullscreenBtn{font-size:11px;padding:4px 7px}}
+  .kbd kbd{background:rgba(255,255,255,.12);padding:2px 6px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
+
+  .rainbow{
+    font-weight:900;
+    letter-spacing:2px;
+    background: linear-gradient(90deg,#ff4d4d,#ffb84d,#ffff4d,#4dff88,#4dd2ff,#6a5cff,#ff4df2);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+
+
+  .btn{appearance:none;border:0;border-radius:14px;padding:12px 16px;font:700 16px system-ui;cursor:pointer;background:#ffffff;color:#0b1020;box-shadow:0 10px 30px rgba(0,0,0,0.35);}
+  
+  .btn.selected{ box-shadow: 0 0 0 2px rgba(255,255,255,0.45) inset; }
+.btn:hover{transform:translateY(-1px);}
+  .btn:active{transform:translateY(0px);}
+  .btn.ghost{background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.22);box-shadow:none;}
+  .panel{background:rgba(10,14,28,0.92); border:1px solid rgba(255,255,255,0.14); border-radius:18px; padding:16px; box-shadow:0 20px 70px rgba(0,0,0,0.55);}
+  .optionBtn{width:100%; text-align:left; padding:10px 12px; border-radius:12px; background:rgba(255,255,255,0.10); color:#fff; border:1px solid rgba(255,255,255,0.14); cursor:pointer; font:650 15px system-ui;}
+  .optionBtn:hover{background:rgba(255,255,255,0.16);}
+  .optionBtn[disabled]{opacity:.6; cursor:default;}
+  .tag{display:inline-block; padding:4px 10px; border-radius:999px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.18); font:700 12px system-ui; letter-spacing:.3px;}
+
+  .levelGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px;}
+  .levelCard{appearance:none;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.06);color:#fff;border-radius:18px;padding:10px;cursor:pointer;text-align:left;transition:transform .15s ease, border-color .15s ease, background .15s ease;box-shadow:none;}
+  .levelCard:hover{transform:translateY(-2px);background:rgba(255,255,255,0.10);}
+  .levelCard.selected{border-color:#fff;background:rgba(255,255,255,0.16);box-shadow:0 0 0 2px rgba(255,255,255,0.12) inset;}
+  .levelCard img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;display:block;box-shadow:0 10px 26px rgba(0,0,0,0.28);margin-bottom:8px;transition:filter .18s ease,opacity .18s ease;}
+  .levelCard.completed img{filter:grayscale(1);opacity:.68;}
+  .levelCard.completed{background:rgba(255,255,255,0.045);}
+  .levelCard .name{font:800 16px system-ui;margin-bottom:4px;}
+  .levelCard .blurb{font:600 12px system-ui;opacity:.78;line-height:1.35;}
+
+  .btn.qsetComplete{border-color:rgba(63,255,132,.95);background:rgba(26,130,70,.34);box-shadow:0 0 0 2px rgba(63,255,132,.25) inset;}
+  .qsetCheck{display:inline-block;margin-left:7px;color:#54ff8f;font-size:18px;line-height:1;vertical-align:-1px;filter:drop-shadow(0 1px 4px rgba(0,0,0,.55));}
+  .extraCreditCode{margin:16px auto;padding:14px 16px;border-radius:14px;background:rgba(54,255,137,.12);border:2px solid rgba(54,255,137,.7);font:900 22px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.5px;word-break:break-word;}
+
+  /* v165 boot/loading screen: visible while the large single-file game parses and assets initialize. */
+  #v165BootLoading{
+    position:fixed;inset:0;z-index:20000;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(circle at 50% 40%,#13264d 0,#081226 46%,#040914 100%);
+    color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+  #v165BootLoading.v165Done{opacity:0;pointer-events:none;transition:opacity .28s ease}
+  #v165BootLoading .v165LoadCard{width:min(520px,86vw);text-align:center;padding:26px 20px}
+  #v165BootLoading .v165LoadTitle{font:950 clamp(28px,7vw,46px)/1 system-ui;margin-bottom:10px}
+  #v165BootLoading .v165LoadSub{font:750 clamp(13px,3.5vw,17px)/1.25 system-ui;opacity:.84;margin-bottom:18px}
+  #v165BootLoading .v165LoadTrack{height:13px;border:2px solid rgba(255,255,255,.78);border-radius:999px;overflow:hidden;background:rgba(255,255,255,.10);box-shadow:0 0 18px rgba(91,165,255,.22)}
+  #v165BootLoading .v165LoadFill{height:100%;width:42%;border-radius:999px;background:linear-gradient(90deg,#ff6b6b,#ffd85a,#68e68f,#61c8ff,#9d7cff);animation:v165LoadSweep 1.15s ease-in-out infinite alternate}
+  #v165BootLoading .v165LoadHint{font:650 12px/1.25 system-ui;opacity:.62;margin-top:11px}
+  @keyframes v165LoadSweep{from{transform:translateX(-95%)}to{transform:translateX(235%)}}
+
+
+  /* v169 loader/home repair: full-screen embedded C-Team artwork + readable overlay */
+  :root{--v169-c-team-bg:url("assets/C_Team_Menu_v566.png");}
+  #v165BootLoading{
+    background-image:linear-gradient(rgba(2,5,12,.34),rgba(2,5,12,.48)),var(--v169-c-team-bg)!important;
+    background-position:center center!important;background-size:cover!important;background-repeat:no-repeat!important;background-color:#050915!important;
+  }
+  #v165BootLoading .v165LoadTitle{display:none!important;}
+  #v165BootLoading .v165LoadCard{
+    width:min(500px,82vw)!important;padding:18px 20px!important;background:rgba(5,10,22,.72)!important;
+    border:2px solid rgba(255,255,255,.20)!important;border-radius:20px!important;box-shadow:0 24px 70px rgba(0,0,0,.55)!important;backdrop-filter:blur(7px);
+  }
+  #v165BootLoading .v165LoadSub{font:850 clamp(18px,4vw,25px)/1.2 system-ui!important;margin:0 0 16px!important;}
+  #introOverlay{
+    background-image:linear-gradient(rgba(2,5,12,.30),rgba(2,5,12,.52)),var(--v169-c-team-bg)!important;
+    background-position:center center!important;background-size:cover!important;background-repeat:no-repeat!important;background-color:#050915!important;
+  }
+  #introOverlay>.panel{background:rgba(6,11,24,.82)!important;border:2px solid rgba(255,255,255,.20)!important;box-shadow:0 24px 70px rgba(0,0,0,.58)!important;backdrop-filter:blur(7px);}
+
+  /* v170 loading-screen placement: keep the poster readable and fill the viewport */
+  #v165BootLoading{align-items:flex-end!important;justify-content:center!important;padding:0 0 6vh!important;box-sizing:border-box!important;}
+  #v165BootLoading .v165LoadCard{margin:0 auto!important;}
+
+  /* v232: gameplay canvas COVER-fills viewport; poster never bleeds through in play. */
+  body.v232-gameplay{background:#000 !important;background-image:none !important;background-attachment:scroll !important;} body.v232-gameplay #wrap{background:#000 !important;background-image:none !important;overflow:hidden !important;}
+  body.v232-gameplay canvas#game{position:absolute !important;left:50% !important;top:50% !important;transform:translate(-50%,-50%) !important;width:max(100vw,177.7777778vh) !important;height:max(100vh,56.25vw) !important;max-width:none !important;max-height:none !important;margin:0 !important;border-radius:0 !important;}
+  @supports (height:100dvh){body.v232-gameplay canvas#game{width:max(100dvw,177.7777778dvh) !important;height:max(100dvh,56.25dvw) !important;}}
+
+
+/* ---- second original style block ---- */
+
+
+#v165BootLoading{overflow:hidden!important;background:#050915!important;}
+#v201BootPoster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;display:block;}
+#v165BootLoading .v165LoadCard{position:relative!important;z-index:2!important;}
+
+
+</style>
+
+
+
+<!--
+  v381 PORTABLE SINGLE FILE
+  All retained media is embedded once in a centralized asset registry.
+  Repeated references reuse the same embedded asset instead of duplicating the binary payload.
+  Removed: obsolete win/high-score MP4 system and unused V77_DRT_HOVER.
+  Retained: Mrs. Butterworth; the later filter excluding her was removed.
+  Original v380 was not modified.
+-->
+</head>
+<body>
+
+<div id="v165BootLoading" aria-live="polite" aria-label="Game loading">
+  <img id="v201BootPoster" alt="" aria-hidden="true" src="assets/C_Team_Menu_v566.png" />
+
+  <div class="v165LoadCard">
+    <div class="v165LoadTitle">The C-Team</div>
+    <div class="v165LoadSub">Loading game…</div>
+    <div class="v165LoadTrack"><div class="v165LoadFill"></div></div>
+    <div class="v165LoadHint">Large game file — this may take a few seconds.</div>
+  </div>
+</div>
+<div id="wrap">
+  <div class="hud">
+    <div style="display:flex;gap:12px;align-items:center;min-width:0;">
+      <div id="score" style="font-weight:900;white-space:nowrap;">P1 ⭐ 3000</div>
+      <div id="status" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Select a character</div>
+    </div>
+    <div style="display:flex;gap:14px;align-items:center;">
+      <div id="coins">🪙 0</div>
+      <div id="carrots">🦩 0 / 15</div>
+      <div id="score2" style="display:none;font-weight:900;white-space:nowrap;">P2 ⭐ 3000</div>
+      <button id="fullscreenBtn" type="button" title="Enter full screen">⛶ Full Screen</button>
+    </div>
+  </div>
+  <canvas id="game" width="960" height="540" aria-label="The C-Team game canvas"></canvas>
+  <audio id="bgMusic" loop preload="auto"></audio>
+  <!-- v381: obsolete win/high-score video overlay removed -->
+
+    
+  <!-- Character unlock popup -->
+  <div id="characterUnlockOverlay" style="position:fixed; inset:0; display:none; z-index:10020; align-items:center; justify-content:center; background:rgba(0,0,0,0.82);">
+    <div class="panel" style="width:min(560px,92vw); text-align:center; padding:24px;">
+      <div style="font:900 30px system-ui; margin-bottom:8px;">🎉 NEW CHARACTER UNLOCKED!</div>
+      <div id="unlockCharacterName" style="font:950 42px system-ui; letter-spacing:1px; margin:4px 0 10px;"></div>
+      <div style="min-height:170px; display:flex; align-items:center; justify-content:center; margin:4px 0 10px;">
+        <img id="unlockCharacterImage" alt="Unlocked character" style="max-width:230px; max-height:170px; object-fit:contain; image-rendering:pixelated; filter:drop-shadow(0 12px 22px rgba(0,0,0,.45));"/>
+      </div>
+      <div id="unlockCharacterText" style="font:650 16px system-ui; opacity:.92; line-height:1.4; margin-bottom:16px;"></div>
+      <button id="unlockCharacterContinue" class="btn" type="button">Continue</button>
+    </div>
+  </div>
+
+  <!-- One-time all-question-sets extra-credit popup -->
+  <div id="extraCreditOverlay" style="position:fixed; inset:0; display:none; z-index:10060; align-items:center; justify-content:center; background:rgba(0,0,0,0.86);">
+    <div class="panel" style="width:min(620px,92vw); text-align:center; padding:26px;">
+      <div style="font:950 34px system-ui; margin-bottom:10px;">🎉 Congratulations!</div>
+      <div style="font:800 22px system-ui; line-height:1.35;">Congratulations, you earned +12 points extra credit.</div>
+      <div style="margin-top:12px; opacity:.86; font:650 14px system-ui;">Send this code to Dr. T for extra credit:</div>
+      <div id="extraCreditCode" class="extraCreditCode"></div>
+      <button id="extraCreditContinue" class="btn" type="button">Continue</button>
+    </div>
+  </div>
+  <!-- Intro: pick lecture review -->
+  <div id="introOverlay" style="position:fixed; inset:0; display:none; z-index:9999; align-items:center; justify-content:center; background:#060b18; z-index:60;">
+    <div class="panel" style="width:min(880px, 94vw); max-height:94vh; overflow-y:auto;">
+      <div style="font:900 40px system-ui; margin:0 0 6px;">The C-Team: Content Review</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin:0 0 10px;">
+      </div>
+      
+      <div style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px;">
+        <button class="btn ghost" data-qset="set1">Lecture 1</button>
+        <button class="btn ghost" data-qset="set2">Lecture 2</button>
+        <button class="btn ghost" data-qset="set3">Lecture 3</button>
+        <button class="btn ghost" data-qset="set4">Lecture 4</button>
+        <button class="btn ghost" data-qset="set5">Lecture 5</button>
+        <button class="btn ghost" data-qset="set6">Lecture 6</button>
+        <button class="btn ghost" data-qset="set7">Lecture 7</button>
+        <button class="btn ghost" data-qset="set8">Lecture 8</button>
+        <button class="btn ghost" data-qset="set9">Lecture 9</button>
+        <button class="btn ghost" data-qset="set10">Quiz 1</button>
+        <button class="btn ghost" data-qset="set11">Quiz 2</button>
+        <button class="btn ghost" data-qset="set12">Quiz 3</button>
+        <button class="btn ghost" data-qset="set13">Quiz 4</button>
+        <button class="btn ghost" data-qset="set14">Praxis PE</button>
+        <button class="btn ghost" data-qset="set15">Praxis Health</button>
+        <button class="btn ghost" data-qset="set16">UDL &amp; Inclusion</button>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <span id="introSelected" class="tag" style="display:none;">Selected: </span>
+        <button id="introHowTo" class="btn ghost" type="button">How to Play</button>
+        <button id="introContinue" class="btn" disabled style="opacity:.6;">Continue</button>
+      </div>
+</div>
+  </div>
+
+
+  <!-- Level Select overlay -->
+  <div id="levelOverlay" style="position:fixed; inset:0; display:none; z-index:9999; align-items:center; justify-content:center; background:rgba(0,0,0,0.80);">
+    <div class="panel" style="width:min(1040px, 95vw); max-height:94vh; overflow-y:auto;">
+      <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+        <div>
+          <div style="font:900 40px system-ui; margin:0 0 6px;">Choose a Level</div>
+          <div style="opacity:.9; font:600 15px system-ui; line-height:1.35;">Pick one of the 25 worlds. Each level uses a unique still image and its own enemy mix.</div>
+        </div>
+        <span id="levelQSetLabel" class="tag"></span>
+      </div>
+      <div id="levelGrid" class="levelGrid"></div>
+      <div style="margin-top:14px; display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <span id="levelSelected" class="tag" style="display:none;">Selected:</span>
+        <div style="display:flex; gap:10px; align-items:center;">
+          <button id="levelBack" class="btn ghost" type="button">Back</button>
+          <button id="levelContinue" class="btn" type="button" disabled style="opacity:.6;">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="howToPlayOverlay" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85);z-index:10000"><div class="panel" style="width:min(860px,94vw);max-height:92vh;overflow-y:auto"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">How to Play</h2><button id="howToClose" class="btn ghost">CLOSE</button></div>
+<div style="font:600 15px/1.5 system-ui;display:grid;gap:12px;margin-top:15px">
+<section><b>START A RUN</b><br>Choose a lecture or quiz for Content Review, or choose Play Without Questions. Select your characters, choose a Morph Up, then pick a level. Character Profiles let you view stats and practice powers.</section>
+<section><b>CONTROLS</b><br>P1: ← / → move, P jump, O or F Action/Power, I switch characters.<br>P2: A / D move, W or C jump, S or B SWAP characters, V Action/Power. Click a SWAP button to control your other selected character. Morph Ups can double jump; some also dash, fly, or swap partners.</section>
+<section><b>GOAL AND GAME MODES</b><br>Collect all pink flamingos and defeat both pairs of bosses. In Content Review, flamingos open questions from the selected bank; read the feedback and continue. Play Without Questions skips the questions and uses character health. Switch characters when you need your teammate. Correct answers and pickups add score; taking hits can cost score or health, depending on the mode.</section>
+<section><b>MORPH UPS AND POWERS</b><br>Choose one of the 30 Morph Ups on the selection screen. Hit a ? box to release an emoji Morph Up pickup, then collect it to transform. Use Action/Power for that form's ability. Morph Ups absorb two hits without losing score or normal HP: the first removes one shield point; the second returns you to your original character. Both hits are protected, with brief invulnerability afterward. Stun and pull abilities keep enemies alive; damaging powers can defeat them. Recharge stars: 5 = 2.5s, 4 = 4.5s, 3 = 6.5s, 2 = 8.5s, 1 = 11s. Some powers allow only one projectile at a time. Six Morph Ups start available; the others are assigned to the 24 boards. The current test build keeps profile practice available.</section>
+<section><b>FOUR BOSS TYPES ON EVERY BOARD</b><br><b>Shield:</b> 3 HP. Shield on for 1 second, off for 3. Stomp or use a damaging power while it is off.<br><b>Double health:</b> 6 successful hits.<br><b>Jumping/flying:</b> 3 HP with brief airtime; attack in the air or after landing. Flying bosses fly for 2 seconds, then stay low for 4.<br><b>TNT:</b> Normal attacks do no damage. Stand near a box and press Action to arm it. Move away during the 2-second fuse. Three explosions defeat the boss. Boss labels show their type and remaining HP. In Mordor, use the moving platform to reach the Death Star and the stationary platform to avoid lava.</section>
+<section><b>FINISH A LEVEL</b><br>After collecting every flamingo and defeating all four bosses, walk up to the exit and press Action/Power. In Goomba Gauntlet, stand on the pipe first. The same Action button uses your power, arms nearby TNT, or activates a ready exit, depending on where you are.</section>
+</div><div style="display:flex;justify-content:flex-end;margin-top:15px"><button id="howToOk" class="btn">GOT IT</button></div>
+</div></div><style>.hint.kbd{display:none!important}</style>
+
+  <!-- Question modal -->
+  <div id="questionOverlay" style="position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.78); z-index:70;">
+    <div class="panel" style="width:min(900px, 94vw);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px;">
+        <div>
+          <div id="qSetTag" class="tag" style="margin-bottom:8px;">Lecture</div>
+          <div id="qPrompt" style="font:850 22px system-ui; line-height:1.25; margin-bottom:10px;"></div>
+        </div>
+        <div class="tag" id="qProgress">Question</div>
+      </div>
+
+      <div id="qOptions" style="display:grid; grid-template-columns:1fr; gap:10px; margin:10px 0 12px;"></div>
+
+      <div id="qFeedback" style="font:800 16px system-ui; margin:8px 0;"></div>
+      <div id="qExplanation" style="opacity:.92; line-height:1.45;"></div>
+
+      <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:12px;">
+        <button id="qContinue" class="btn" style="display:none;">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- High score -->
+  <div id="highScoreOverlay" style="position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.82); z-index:80;">
+    <div class="panel" style="width:min(860px, 94vw);">
+      <div style="font:900 34px system-ui; margin:0 0 6px;">High Score</div>
+<div id="runSummary" style="opacity:.9; margin-bottom:12px; line-height:1.35;"></div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px;">
+        <button id="resetBtn" class="btn" type="button">Reset</button>
+        <input id="playerName" placeholder="Enter your first and last name" style="flex:1; min-width:220px; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,0.18); background:rgba(255,255,255,0.08); color:#fff; font:650 15px system-ui;"/>
+        <button id="saveScoreBtn" class="btn">Save</button>
+      </div>
+      <div id="entryPreview" style="opacity:.92; margin:0 0 12px; line-height:1.35;"></div>
+
+      <div style="overflow:auto; max-height:42vh; border-radius:12px; border:1px solid rgba(255,255,255,0.14);">
+        <table style="width:100%; border-collapse:collapse; font:650 14px system-ui;">
+          <thead style="position:sticky; top:0; background:rgba(10,14,28,0.98);">
+            <tr>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.12);">Name</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.12);">Character</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.12);">Score</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.12);">Lecture</th>
+              <th style="text-align:left; padding:10px 12px; border-bottom:1px solid rgba(255,255,255,0.12);">Date</th>
+            </tr>
+          </thead>
+          <tbody id="scoreTableBody"></tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:10px; opacity:.75; font:600 12px system-ui;">
+        Scores save only on this device/browser.
+      </div>
+
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="hint kbd" style="display:none" aria-hidden="true"></div>
+</div>
+
+<!-- v381 portable asset registry: each retained binary is embedded once -->
+
+<script src="local-assets/bootstrap.js"></script>
+<script src="local-assets/images-00.js"></script>
+<script src="local-assets/images-01.js"></script>
+<script src="local-assets/images-02.js"></script>
+<script src="local-assets/images-03.js"></script>
+<script src="local-assets/images-04.js"></script>
+<script src="local-assets/images-05.js"></script>
+<script src="local-assets/images-06.js"></script>
+<script src="local-assets/images-07.js"></script>
+<script src="local-assets/images-08.js"></script>
+<script src="local-assets/images-09.js"></script>
+<script src="local-assets/images-10.js"></script>
+<script src="local-assets/images-11.js"></script>
+<script src="local-assets/images-12.js"></script>
+<script src="local-assets/images-13.js"></script>
+<script src="local-assets/images-14.js"></script>
+<script src="local-assets/images-15.js"></script>
+<script src="local-assets/images-16.js"></script>
+<script src="local-assets/images-17.js"></script>
+<script src="local-assets/images-18.js"></script>
+<script src="local-assets/images-19.js"></script>
+<script src="local-assets/images-20.js"></script>
+<script src="local-assets/images-21.js"></script>
+<script src="local-assets/images-22.js"></script>
+<script src="local-assets/images-23.js"></script>
+<script src="local-assets/images-24.js"></script>
+<script src="local-assets/images-25.js"></script>
+<script src="local-assets/images-26.js"></script>
+<script src="local-assets/images-27.js"></script>
+<script src="local-assets/images-28.js"></script>
+<script src="local-assets/images-29.js"></script>
+<script src="local-assets/images-30.js"></script>
+<script src="local-assets/images-31.js"></script>
+<script src="local-assets/images-32.js"></script>
+<script src="local-assets/images-33.js"></script>
+<script src="local-assets/menu-v566.js"></script>
+<script src="js/asset-manifest-v559.js"></script>
+<script src="js/cteam-v559-01.js"></script>
+</body>
+</html>
