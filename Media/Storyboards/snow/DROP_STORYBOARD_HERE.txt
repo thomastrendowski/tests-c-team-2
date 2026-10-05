@@ -1,2 +1,0 @@
-Replace storyboard.png in this folder with this level’s PNG storyboard.
-Game level key: snow

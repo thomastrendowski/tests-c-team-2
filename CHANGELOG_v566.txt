@@ -1,1 +1,0 @@
-v566: Replaced old menu poster and intro video with the corrected supplied files. Gameplay remains unchanged.
