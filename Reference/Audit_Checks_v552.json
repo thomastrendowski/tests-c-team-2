@@ -1,0 +1,27 @@
+{
+  "version": 552,
+  "portrait": "iron_land frame 6, sitting with raccoon",
+  "replaced_bank": "set1 / Lecture 1",
+  "new_bank": "UDL & Inclusion",
+  "questions": 12,
+  "answers": [
+    0,
+    2,
+    3,
+    2,
+    1,
+    3,
+    3,
+    1,
+    1,
+    3,
+    3,
+    3
+  ],
+  "UDL_flamingo_goal": 12,
+  "UDL_completion_correct": 9,
+  "other_mode_goal": 15,
+  "main_and_embedded_syntax": "pass",
+  "runtime_checks": "pass",
+  "browser_playtest": "not performed"
+}

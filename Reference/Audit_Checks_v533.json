@@ -1,0 +1,202 @@
+[
+  {
+    "name": "standard transform starts",
+    "pass": true
+  },
+  {
+    "name": "standard mushroom grow sound",
+    "pass": true
+  },
+  {
+    "name": "standard no old army",
+    "pass": true
+  },
+  {
+    "name": "standard Optimus art height",
+    "pass": true
+  },
+  {
+    "name": "standard recharge 2 stars",
+    "pass": true
+  },
+  {
+    "name": "standard dash starts",
+    "pass": true
+  },
+  {
+    "name": "standard dash forward 260px",
+    "pass": true
+  },
+  {
+    "name": "standard dash returns",
+    "pass": true
+  },
+  {
+    "name": "standard repeat F does not refresh duration",
+    "pass": true
+  },
+  {
+    "name": "standard expires at 7 seconds",
+    "pass": true
+  },
+  {
+    "name": "standard shrink sound on expiry",
+    "pass": true
+  },
+  {
+    "name": "standard cannot immediately transform again",
+    "pass": true
+  },
+  {
+    "name": "standard can transform after recharge",
+    "pass": true
+  },
+  {
+    "name": "noq transform starts",
+    "pass": true
+  },
+  {
+    "name": "noq mushroom grow sound",
+    "pass": true
+  },
+  {
+    "name": "noq no old army",
+    "pass": true
+  },
+  {
+    "name": "noq Optimus art height",
+    "pass": true
+  },
+  {
+    "name": "noq recharge 2 stars",
+    "pass": true
+  },
+  {
+    "name": "noq dash starts",
+    "pass": true
+  },
+  {
+    "name": "noq dash forward 260px",
+    "pass": true
+  },
+  {
+    "name": "noq dash returns",
+    "pass": true
+  },
+  {
+    "name": "noq repeat F does not refresh duration",
+    "pass": true
+  },
+  {
+    "name": "noq expires at 7 seconds",
+    "pass": true
+  },
+  {
+    "name": "noq shrink sound on expiry",
+    "pass": true
+  },
+  {
+    "name": "noq cannot immediately transform again",
+    "pass": true
+  },
+  {
+    "name": "noq can transform after recharge",
+    "pass": true
+  },
+  {
+    "name": "Player 2 transform",
+    "pass": true
+  },
+  {
+    "name": "Player 2 dash",
+    "pass": true
+  },
+  {
+    "name": "Player 2 expiry",
+    "pass": true
+  },
+  {
+    "name": "walk frames loaded",
+    "pass": true
+  },
+  {
+    "name": "dash frames loaded",
+    "pass": true
+  },
+  {
+    "name": "jump frames loaded",
+    "pass": true
+  },
+  {
+    "name": "Actual F key activates mech",
+    "pass": true
+  },
+  {
+    "name": "Actual F key while mech dashes",
+    "pass": true
+  },
+  {
+    "name": "Mech dash defeats regular enemy",
+    "pass": true
+  },
+  {
+    "name": "Actual player-two F key activates mech",
+    "pass": true
+  },
+  {
+    "name": "Profile text updated",
+    "pass": true
+  },
+  {
+    "name": "Homer/Marge first hit preserves power",
+    "pass": true
+  },
+  {
+    "name": "Homer/Marge second hit removes every form flag",
+    "pass": true
+  },
+  {
+    "name": "Homer/Marge does not return after losing shield",
+    "pass": true
+  },
+  {
+    "name": "P2 first hit absorbs damage",
+    "pass": true
+  },
+  {
+    "name": "P2 second hit reverts without score loss",
+    "pass": true
+  },
+  {
+    "name": "Penguin receives freeze without defeat",
+    "pass": true
+  },
+  {
+    "name": "Yeti receives freeze without immediate defeat",
+    "pass": true
+  },
+  {
+    "name": "Boss excluded from regular freeze",
+    "pass": true
+  },
+  {
+    "name": "Mr Freeze defeats Yeti on thaw",
+    "pass": true
+  },
+  {
+    "name": "Damaging projectiles defeat both walkers",
+    "pass": true
+  },
+  {
+    "name": "Technodrome starts",
+    "pass": true
+  },
+  {
+    "name": "Ground impact plays laser and thud",
+    "pass": true
+  },
+  {
+    "name": "All four robot frames crop without orange",
+    "pass": true
+  }
+]

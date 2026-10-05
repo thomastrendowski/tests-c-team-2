@@ -1,0 +1,6 @@
+Use case: stylized-concept. Asset type: transparent game sprite sheet. A friendly brown plush toy lion with a dark fluffy mane and small white feather wings, visibly flying with feet tucked slightly. Four animation poses in exactly a 2 by 2 equal grid: wings raised, midway, lowered, midway returning. All side profile facing right, consistent body size and design, smooth crisp illustrated clay toy style, full body and wings contained in each cell, generous empty gutters. Actual transparent background, no floor, no shadows outside subject, no text, no borders, no scenery.
+
+Background extraction prompt:
+Remove the entire background and all colored glow from this sprite sheet. Keep only the four plush winged lions, fully intact. Everything outside the toys must be fully transparent with zero alpha. Preserve the 2 by 2 layout, poses, toy colors and crisp edges. No drop shadows.
+
+Generated and edited with built-in image tool.

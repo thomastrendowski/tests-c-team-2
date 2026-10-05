@@ -1,0 +1,15 @@
+{
+  "version": 547,
+  "syntax": "passed",
+  "runtime_checks": [
+    "platform carriage",
+    "patrol bounds",
+    "freeze",
+    "archer telegraph",
+    "arrow travel",
+    "sprite dispatch",
+    "stomp defeat",
+    "pause"
+  ],
+  "browser_playthrough": "not run"
+}
