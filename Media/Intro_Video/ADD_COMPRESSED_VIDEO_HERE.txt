@@ -1,1 +1,0 @@
-Put your compressed video here and name it intro.mp4. Keep it under 100 MB (under 90 MB recommended). The game already points to this filename.

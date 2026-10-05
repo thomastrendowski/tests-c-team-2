@@ -1,2 +1,0 @@
-Replace intro.mp4 in this folder with your video. Keep the filename intro.mp4.
-Used for first-time setup and the ending after Level 24.
