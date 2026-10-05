@@ -1,1 +1,0 @@
-Extract the entire ZIP first. Double-click Start_Game.html. Keep Game/ and Media/ beside it. No BAT file or local server is needed. If your browser blocks autoplay, click Start video. Local and website browser saves are separate.
