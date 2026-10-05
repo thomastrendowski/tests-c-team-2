@@ -1,0 +1,274 @@
+[
+  {
+    "name": "All 30 Morph Ups have explicit assignments",
+    "pass": true
+  },
+  {
+    "name": "Six Morph Ups available from start",
+    "pass": true
+  },
+  {
+    "name": "One Morph Up assigned to each of 24 boards",
+    "pass": true
+  },
+  {
+    "name": "Ms. Pac-Man belongs to Wonka",
+    "pass": true
+  },
+  {
+    "name": "Amy Rose and Frodo moved correctly",
+    "pass": true
+  },
+  {
+    "name": "Frodo replaces Snoopy on painting board",
+    "pass": true
+  },
+  {
+    "name": "Iron Man replaces Duffman on pizza board",
+    "pass": true
+  },
+  {
+    "name": "Updated bosses resolve to current Morph artwork",
+    "pass": true
+  },
+  {
+    "name": "All boards retain one of each boss type",
+    "pass": true
+  },
+  {
+    "name": "goomba floor stays low",
+    "pass": true
+  },
+  {
+    "name": "goomba platforms stay in low band",
+    "pass": true
+  },
+  {
+    "name": "goomba full-size individual image loaded",
+    "pass": true
+  },
+  {
+    "name": "goomba full-screen rendering at 0",
+    "pass": true
+  },
+  {
+    "name": "goomba full-screen rendering at 1000",
+    "pass": true
+  },
+  {
+    "name": "goomba full-screen rendering at 6000",
+    "pass": true
+  },
+  {
+    "name": "snow floor stays low",
+    "pass": true
+  },
+  {
+    "name": "snow platforms stay in low band",
+    "pass": true
+  },
+  {
+    "name": "snow full-size individual image loaded",
+    "pass": true
+  },
+  {
+    "name": "snow full-screen rendering at 0",
+    "pass": true
+  },
+  {
+    "name": "snow full-screen rendering at 1000",
+    "pass": true
+  },
+  {
+    "name": "snow full-screen rendering at 6000",
+    "pass": true
+  },
+  {
+    "name": "desert floor stays low",
+    "pass": true
+  },
+  {
+    "name": "desert platforms stay in low band",
+    "pass": true
+  },
+  {
+    "name": "desert full-size individual image loaded",
+    "pass": true
+  },
+  {
+    "name": "desert full-screen rendering at 0",
+    "pass": true
+  },
+  {
+    "name": "desert full-screen rendering at 1000",
+    "pass": true
+  },
+  {
+    "name": "desert full-screen rendering at 6000",
+    "pass": true
+  },
+  {
+    "name": "jungle floor stays low",
+    "pass": true
+  },
+  {
+    "name": "jungle platforms stay in low band",
+    "pass": true
+  },
+  {
+    "name": "jungle full-size individual image loaded",
+    "pass": true
+  },
+  {
+    "name": "jungle full-screen rendering at 0",
+    "pass": true
+  },
+  {
+    "name": "jungle full-screen rendering at 1000",
+    "pass": true
+  },
+  {
+    "name": "jungle full-screen rendering at 6000",
+    "pass": true
+  },
+  {
+    "name": "mountain floor stays low",
+    "pass": true
+  },
+  {
+    "name": "mountain platforms stay in low band",
+    "pass": true
+  },
+  {
+    "name": "mountain full-size individual image loaded",
+    "pass": true
+  },
+  {
+    "name": "mountain full-screen rendering at 0",
+    "pass": true
+  },
+  {
+    "name": "mountain full-screen rendering at 1000",
+    "pass": true
+  },
+  {
+    "name": "mountain full-screen rendering at 6000",
+    "pass": true
+  },
+  {
+    "name": "Every level has exactly four simple boss types",
+    "pass": true
+  },
+  {
+    "name": "TNT always occupies a supported main boss slot",
+    "pass": true
+  },
+  {
+    "name": "Heavy has double health; others have three",
+    "pass": true
+  },
+  {
+    "name": "No shrinking, wall-charge, or specials-only immunity",
+    "pass": true
+  },
+  {
+    "name": "Death Star has limited flight",
+    "pass": true
+  },
+  {
+    "name": "Tutorial describes all four rules",
+    "pass": true
+  },
+  {
+    "name": "Stationary boss refuge is above peak lava",
+    "pass": true
+  },
+  {
+    "name": "Moving boss lift is in arena and reachable",
+    "pass": true
+  },
+  {
+    "name": "Refuge remains fixed through runtime overrides",
+    "pass": true
+  },
+  {
+    "name": "Lift actually moves vertically",
+    "pass": true
+  },
+  {
+    "name": "Flying boss rises for two seconds",
+    "pass": true
+  },
+  {
+    "name": "Flying boss returns low for four seconds",
+    "pass": true
+  },
+  {
+    "name": "Jumping boss makes a brief reachable hop",
+    "pass": true
+  },
+  {
+    "name": "Jumping boss lands between hops",
+    "pass": true
+  },
+  {
+    "name": "Damaging F hit counts one whole HP",
+    "pass": true
+  },
+  {
+    "name": "Shield blocks every damage path",
+    "pass": true
+  },
+  {
+    "name": "All four creature frames remove yellow border",
+    "pass": true
+  },
+  {
+    "name": "goomba sharp background and floor render",
+    "pass": true
+  },
+  {
+    "name": "snow sharp background and floor render",
+    "pass": true
+  },
+  {
+    "name": "desert sharp background and floor render",
+    "pass": true
+  },
+  {
+    "name": "jungle sharp background and floor render",
+    "pass": true
+  },
+  {
+    "name": "mountain sharp background and floor render",
+    "pass": true
+  },
+  {
+    "name": "Backgrounds use uniform 2x pixel scale",
+    "pass": true
+  },
+  {
+    "name": "Second Mordor pair has Vader TNT and airborne Death Star",
+    "pass": true
+  },
+  {
+    "name": "Actual Death Star rises during runtime",
+    "pass": true
+  },
+  {
+    "name": "Airborne Death Star collision accepts damaging projectile",
+    "pass": true
+  },
+  {
+    "name": "TNT arms with custom Shredder F handler",
+    "pass": true
+  },
+  {
+    "name": "TNT explosion removes one boss HP",
+    "pass": true
+  },
+  {
+    "name": "TNT boss ignores normal projectile damage",
+    "pass": true
+  }
+]
