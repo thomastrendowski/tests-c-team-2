@@ -1,0 +1,1 @@
+v571: Iago replaces the red helmet bird. Drops three tumbling crackers instead of eggs with the same timing, hitboxes, falling motion and damage. Separate Iago and supplied Toucan sheets/frame tables. Deletes obsolete red bird art; old hawk and Toucan art remain removed. Preserves progression, intro, storyboards and combat.

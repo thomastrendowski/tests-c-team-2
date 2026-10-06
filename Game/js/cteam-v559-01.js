@@ -351,7 +351,7 @@ function playCharacterHitSfx(row) {
           const dr = data[idx] - bg[0];
           const dg = data[idx + 1] - bg[1];
           const db = data[idx + 2] - bg[2];
-          if (!img._v567NativeAlpha && (dr * dr + dg * dg + db * db) <= tolSq) {
+          if (!img._nativeAlpha && (dr * dr + dg * dg + db * db) <= tolSq) {
             data[idx + 3] = 0;
           }
           if (data[idx + 3] > 10) {
@@ -1607,11 +1607,15 @@ const PROGRESSION_CHARACTER_ROWS = [...LEVEL_UNLOCK_CHARACTER_ROWS, ...MILESTONE
   const ANDYS_ROOM_BG_SRC = __CTEAM_ASSETS["assets/ca0dc10905cb85b43528.webp"];
   const DR_T_OFFICE_BG_SRC = __CTEAM_ASSETS["assets/cab76406b7a42afe4383.webp"];
 
-  const RED_BIRD_SHEET = new Image();
-  RED_BIRD_SHEET.src = "assets/Wildlife_v567/toucan_sam_sheet.png"; RED_BIRD_SHEET._v567NativeAlpha=true;
-  const RED_BIRD_FRAME_XS = [0, 543, 1086, 1629];
-  const RED_BIRD_FRAME_WS = [543, 543, 543, 543];
-  const RED_BIRD_FRAME_H = 724;
+  const IAGO_SHEET = new Image();
+  IAGO_SHEET._nativeAlpha=true;
+  IAGO_SHEET.src = "assets/Iago/iago_flying_sheet.png";
+  const IAGO_FRAME_RECTS = [{"x": 0, "y": 0, "w": 543, "h": 724}, {"x": 543, "y": 0, "w": 543, "h": 724}, {"x": 1086, "y": 0, "w": 543, "h": 724}, {"x": 1629, "y": 0, "w": 543, "h": 724}];
+
+  const TOUCAN_SAM_SHEET = new Image();
+  TOUCAN_SAM_SHEET._nativeAlpha=true;
+  TOUCAN_SAM_SHEET.src = "assets/Toucan_Sam/toucan_sam_sheet.png";
+  const TOUCAN_SAM_FRAME_RECTS = [{"x": 80, "y": 0, "w": 450, "h": 516}, {"x": 610, "y": 0, "w": 450, "h": 516}, {"x": 1110, "y": 0, "w": 450, "h": 516}, {"x": 1610, "y": 0, "w": 438, "h": 516}];
 
   const ROADRUNNER_SHEET = new Image();
   ROADRUNNER_SHEET.src = __CTEAM_ASSETS["assets/18622e64ef9c5287a525.png"];
@@ -3132,10 +3136,7 @@ return {
   const OTTO_RUNNER_FRAME_RECTS = [
     {x:8,y:8,w:194,h:232}, {x:255,y:8,w:203,h:232}, {x:530,y:8,w:202,h:232}, {x:764,y:8,w:190,h:232}
   ];
-  const HAWK_FLY_SHEET = new Image();
-  // Toucan Sam replaces the legacy flying bird everywhere this shared sheet is used.
-  HAWK_FLY_SHEET.src = "assets/Wildlife_v567/toucan_sam_sheet.png"; HAWK_FLY_SHEET._v567NativeAlpha=true;
-  const HAWK_FLY_FRAME_RECTS = [{"x": 0, "y": 0, "w": 543, "h": 724}, {"x": 543, "y": 0, "w": 543, "h": 724}, {"x": 1086, "y": 0, "w": 543, "h": 724}, {"x": 1629, "y": 0, "w": 543, "h": 724}];
+  // All flying-bird renderers use TOUCAN_SAM_SHEET.
   const MEEKO_SHEET = new Image();
   MEEKO_SHEET.src = __CTEAM_ASSETS["assets/f79067fbdf52b8743ab1.png"];
   const MEEKO_FRAME_XS = [7, 59, 113, 163, 207, 262];
@@ -3951,7 +3952,7 @@ return {
           patrol:true, minX:plat.x+12, maxX:plat.x+plat.w-68, patrolDir:(k % 2 === 0 ? -1 : 1), patrolSpeed:cfg.patrolSpeed
         });
       });
-      // The painting bird remains the intentional flying hazard above the logs.
+      // Iago flies over the logs and drops three crackers.
       redBirdHazard = {active:false,timer:2.5,x:0,y:105,baseY:105,w:124,h:92,speed:235,animT:0,waveAmp:22,waveFreq:3.4,wavePhase:0,eggDropsRemaining:0,eggDropT:0,eggSequenceStarted:false};
     }
     if (level.key === 'tokoyo') {
@@ -7154,9 +7155,9 @@ function drawHeroSlashEffect(boxes, theme) {
           // top of it made the flyer look doubled/distorted, so render the clean sheet alone.
           drawProcessedSheetFrame('waterfallWarioFramesV2',WARIO_RUNNER_SHEET,makeVariableFrameRects(WARIO_RUNNER_FRAME_XS,WARIO_RUNNER_FRAME_WS,WARIO_RUNNER_FRAME_H),frame,f.x,sy,f.w,f.h,{tolerance:35,pad:1,flip:f.vx>0});
         } else if(f.type==='hawk'){
-          drawProcessedSheetFrame('waterfallHawkFrames',HAWK_FLY_SHEET,HAWK_FLY_FRAME_RECTS,frame,f.x,sy,f.w,f.h,{tolerance:18,pad:2,flip:f.vx<0});
+          drawProcessedSheetFrame('toucanWaterfallFrames',TOUCAN_SAM_SHEET,TOUCAN_SAM_FRAME_RECTS,frame,f.x,sy,f.w,f.h,{tolerance:18,pad:2,flip:f.vx<0});
         } else {
-          drawProcessedSheetFrame('waterfallRedBirdFrames',RED_BIRD_SHEET,makeVariableFrameRects(RED_BIRD_FRAME_XS,RED_BIRD_FRAME_WS,RED_BIRD_FRAME_H),frame,f.x,sy,f.w,f.h,{tolerance:35,pad:2,flip:f.vx>0});
+          drawProcessedSheetFrame('iagoWaterfallFrames',IAGO_SHEET,IAGO_FRAME_RECTS,frame,f.x,sy,f.w,f.h,{tolerance:35,pad:2,flip:f.vx>0});
         }
       }
       ctx.restore();
@@ -10586,7 +10587,7 @@ STATE.flashT = 0.18;
       } else {
         b.x -= b.speed * dt;
         b.y = b.baseY + Math.sin(STATE.time * b.waveFreq + b.wavePhase) * b.waveAmp;
-        // Start the 3-egg stagger only when the bird gets within 60px
+        // Start the 3-cracker stagger only when the bird gets within 60px
         // horizontally of the player. Once triggered, finish the full sequence.
         const birdNearPlayer = b.x <= (p.x + p.w + 30) && (b.x + b.w) >= (p.x - 30);
         if (!b.eggSequenceStarted && birdNearPlayer) {
@@ -13289,7 +13290,7 @@ function drawEnemy(e) {const __v532PrevSound=STATE._v532AudioActor;STATE._v532Au
       return;
     }
     if (e.type === "hawkFly") {
-      const proc = getProcessedSheetFrames('hawkFlySheetFrames', HAWK_FLY_SHEET, HAWK_FLY_FRAME_RECTS, { tolerance: 18, pad: 2 });
+      const proc = getProcessedSheetFrames('toucanFlyFrames', TOUCAN_SAM_SHEET, TOUCAN_SAM_FRAME_RECTS, { tolerance: 18, pad: 2 });
       if (proc && proc.frames && proc.frames.length) {
         const frame = proc.frames[Math.floor((STATE.time * 10 + (e.animOffset || 0)) % proc.frames.length)];
         const screenX = e.x - STATE.cameraX;
@@ -13306,7 +13307,7 @@ function drawEnemy(e) {const __v532PrevSound=STATE._v532AudioActor;STATE._v532Au
       return;
     }
     if (e.type === "prideRoadrunner") {
-      const proc = getProcessedSheetFrames('prideZazuFrames', HAWK_FLY_SHEET, HAWK_FLY_FRAME_RECTS, { tolerance: 18, pad: 2 });
+      const proc = getProcessedSheetFrames('toucanGroundFrames', TOUCAN_SAM_SHEET, TOUCAN_SAM_FRAME_RECTS, { tolerance: 18, pad: 2 });
       if (proc && proc.frames && proc.frames.length) {
         const frame = proc.frames[Math.floor((STATE.time * 10 + (e.animOffset || 0)) % proc.frames.length)];
         const screenX = e.x - STATE.cameraX;
@@ -13666,13 +13667,13 @@ if (hx > -80 && hx < canvas.width + 80) {
         { bgColor: [0, 0, 0], tolerance: 12, pad: 2 }
       );
     }
-    if (STATE.redBirdHazard && STATE.redBirdHazard.active && RED_BIRD_SHEET.complete) {
+    if (STATE.redBirdHazard && STATE.redBirdHazard.active && IAGO_SHEET.complete) {
       const b = STATE.redBirdHazard;
-      const frame = Math.floor(b.animT * 8.5) % RED_BIRD_FRAME_XS.length;
+      const frame = Math.floor(b.animT * 8.5) % IAGO_FRAME_RECTS.length;
       drawProcessedSheetFrame(
-        'redBirdFrames',
-        RED_BIRD_SHEET,
-        makeVariableFrameRects(RED_BIRD_FRAME_XS, RED_BIRD_FRAME_WS, RED_BIRD_FRAME_H),
+        'iagoCrackerHazardFrames',
+        IAGO_SHEET,
+        IAGO_FRAME_RECTS,
         frame,
         b.x - STATE.cameraX, b.y, b.w, b.h,
         { pad: 2, tolerance: 20 }
@@ -13687,7 +13688,10 @@ if (hx > -80 && hx < canvas.width + 80) {
         ctx.save();
         ctx.translate(egg.x - STATE.cameraX + egg.w/2, egg.y + egg.h/2);
         ctx.rotate(egg.rot);
-        ctx.fillText('🥚', 0, 0);
+        // v571: oversized tumbling cracker; keep the original projectile hitbox.
+        ctx.fillStyle='#e9bb6c';ctx.strokeStyle='#98602c';ctx.lineWidth=2;
+        ctx.fillRect(-12,-14,24,28);ctx.strokeRect(-12,-14,24,28);
+        ctx.fillStyle='#a8783e';for(const hx of [-6,0,6])for(const hy of [-8,0,8]){ctx.beginPath();ctx.arc(hx,hy,1.2,0,Math.PI*2);ctx.fill();}
         ctx.restore();
       }
       ctx.restore();
@@ -17232,9 +17236,9 @@ if (STATE.levelKey==='goomba' && pipeScreenX > -80 && pipeScreenX < canvas.width
       const frame=Math.floor((e.animT||STATE.time)*9)%LAVA_DRAGON_SHEET_FRAME_COUNT;
       drawProcessedSheetFrame('lavaDragonFramesClean',LAVA_DRAGON_SHEET,LAVA_DRAGON_FRAME_RECTS,frame,sx,e.y,e.w,e.h,{bgColor:[0,0,0],tolerance:12,pad:2});return;
     }
-    if(key==='redBirdHazard'&&RED_BIRD_SHEET.complete){
-      const frame=Math.floor((e.animT||STATE.time)*8.5)%RED_BIRD_FRAME_XS.length;
-      drawProcessedSheetFrame('redBirdFrames',RED_BIRD_SHEET,makeVariableFrameRects(RED_BIRD_FRAME_XS,RED_BIRD_FRAME_WS,RED_BIRD_FRAME_H),frame,sx,e.y,e.w,e.h,{pad:2,tolerance:20});return;
+    if(key==='redBirdHazard'&&IAGO_SHEET.complete){
+      const frame=Math.floor((e.animT||STATE.time)*8.5)%IAGO_FRAME_RECTS.length;
+      drawProcessedSheetFrame('iagoCrackerHazardFrames',IAGO_SHEET,IAGO_FRAME_RECTS,frame,sx,e.y,e.w,e.h,{pad:2,tolerance:20});return;
     }
     if(key==='yetiRunner'&&YETI_SHEET.complete){
       const frame=Math.floor((e.animT||STATE.time)*10)%YETI_FRAME_COUNT,sw=YETI_SHEET.width/YETI_COLS,sh=YETI_SHEET.height;

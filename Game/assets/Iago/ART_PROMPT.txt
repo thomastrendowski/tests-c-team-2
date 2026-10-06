@@ -1,0 +1,1 @@
+Built-in image generation. Iago flying animation: four equal cells in one horizontal row with spacing matching the uploaded Toucan sheet, wings up/middle/down/middle up, consistent head/body size, transparent background and large gutters. Reference preserves red body, black brows, orange beak and blue tail.

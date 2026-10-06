@@ -1,1 +1,0 @@
-Built-in image generation: A four-frame horizontal sprite sheet of Toucan Sam flying right for a cheerful 2D platform game. Wings raised, halfway down, lowered, halfway up. Friendly blue toucan, colorful striped beak, clean outlines, transparent background.
